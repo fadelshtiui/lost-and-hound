@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Ubuntu', sans-serif;
+	background: #0168b3;
+}
+
+html {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	/* remove scrollbar space */
+	background: transparent;
+	/* optional: just make scrollbar invisible */
+}
+
+h1,
+header {
+	text-align: center;
+}
+
+header {
+	color: white;
+	margin-top: 5%;
+	font-size: 4em;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 50%;
+	min-width: 300px;
+	margin: 60px auto;
+}
+
+.progress {
+	height: 5px;
+	width: 100%;
+	background-color: white;
+	position: relative;
+}
+
+.progress__bar {
+	position: absolute;
+	height: 100%;
+	background-color: #3a455b;
+	transition: width 0.5s;
+	width: 0;
+}
+
+.progress__num {
+	width: 20px;
+	height: 20px;
+	background-color: #8e95b7;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+	color: white;
+	bottom: 50%;
+	transform: translateY(50%);
+	transition-delay: 0s;
+}
+
+.progress__num--1 {
+	left: 0;
+}
+
+.progress__num--2 {
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.progress__num--3 {
+	left: 100%;
+	transform: translate(-100%, 50%);
+}
+
+.progress__num::before {
+	height: 100%;
+	background-color: #3a455b;
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	width: 0px;
+	transition: width 0.07s;
+	z-index: -1;
+}
+
+.progress__num--filled::before {
+	width: 100%;
+	transition-delay: 0.4s;
+}
+
+.cards {
+	position: relative;
+}
+
+.card {
+	display: block;
+	background-color: white;
+	margin-top: 45px;
+	padding: 20px;
+	border-radius: 5px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	transition: all 1s;
+}
+
+.card--off-screen {
+	opacity: 0;
+	top: 0;
+	left: 60%;
+}
+
+.card--hide {
+	animation-name: hide;
+	animation-duration: 1s;
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+.card--none {
+	display: none;
+}
+
+.card--show {
+	animation-name: show;
+	animation-duration: 1s;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.card__button {
+	background-color: #0168b3;
+	color: white;
+	font-weight: 600;
+	border: none;
+	padding: 10px 20px;
+	font-size: 0.9rem;
+	cursor: pointer;
+	border-radius: 10px;
+	text-transform: uppercase;
+	margin-left: 10px;
+	float: right;
+	margin-top: 40px;
+}
+
+.card__button:hover {
+	opacity: 0.5;
+}
+
+.form {
+	width: 100%;
+}
+
+.form .form__group {
+	position: relative;
+	height: 30px;
+	margin: 30px 0px 20px 0px;
+	width: 100%;
+}
+
+.form .form__input {
+	height: 100%;
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #eee;
+}
+
+.form .form__input:focus {
+	outline: none;
+}
+
+.form .form__input:focus+label,
+.form .form__input:valid+label {
+	transform: translateY(-105%);
+	top: 0%;
+	left: 0;
+	font-size: 0.8rem;
+}
+
+.form .form__input:focus~.border--left {
+	transition-delay: 0s;
+	bottom: 0;
+}
+
+.form .form__input:focus~.border--bottom {
+	transition-delay: 0.15s;
+	right: 0;
+}
+
+.form .form__input:focus~.border--right {
+	transition-delay: 0.3s;
+	top: 0;
+}
+
+.form .form__input:focus~.border--top {
+	transition-delay: 0.45s;
+	left: 0;
+}
+
+.form__label {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 5px;
+	cursor: text;
+	transition: left 0.15s, top 0.15s, transform 0.15s, font-size 0.15s;
+}
+
+.border {
+	position: absolute;
+	background-color: #0168b3;
+	;
+}
+
+.border--left {
+	top: 0;
+	width: 2px;
+	bottom: 100%;
+	transition: bottom 0.15s;
+	transition-delay: 0.9s;
+}
+
+.border--bottom {
+	left: 0;
+	right: 100%;
+	height: 2px;
+	transition: right 0.15s;
+	transition-delay: 0.3s;
+}
+
+.border--right {
+	top: 100%;
+	bottom: 0;
+	right: 0;
+	width: 2px;
+	transition: top 0.15s;
+	transition-delay: 0.15s;
+}
+
+.border--top {
+	left: 100%;
+	right: 0;
+	top: 0;
+	height: 2px;
+	transition: left 0.15s;
+}
+
+.checkbox__group {
+	margin: 20px 0px;
+}
+
+.checkbox__label {
+	display: flex;
+}
+
+.checkbox__original {
+	display: none;
+}
+
+.checkbox__original:checked+.checkbox__custom .checkbox__tick {
+	display: inline-block;
+}
+
+.checkbox__custom {
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #A9A9A9;
+	border-radius: 10%;
+	display: inline-block;
+}
+
+.checkbox__tick {
+	font-size: 25px;
+	position: relative;
+	left: 2px;
+	bottom: 7px;
+	display: none;
+}
+
+@keyframes hide {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	15% {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes show {
+	0% {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		transform: scale(1.1);
+	}
+}
+
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+.image-container:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.image-container {
+	border: 3px solid white;
+	border-style: dashed;
+}
+
+h2 {
+	width: 100%;
+	margin: 20px;
+}
+
+.hidden {
+	display: none;
+}

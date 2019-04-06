@@ -1,0 +1,91 @@
+/*
+* {
+  box-sizing: border-box;
+}
+*/
+
+.colorPicker {
+	margin-top: 1em;
+	font-size: 0.875em;
+	text-align: center;
+	display: inline-table;
+	width: 100%;
+	max-width: 40em;
+	background: #fff;
+	padding: 2px;
+	border-radius: 0.35em;
+	box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+.colorPicker label {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0.5);
+	transition: all 0.2s ease-in-out;
+	display: table-cell;
+	cursor: pointer;
+	vertical-align: middle;
+	padding: 0.5em 1em;
+	text-transform: capitalize;
+	letter-spacing: -0.5em;
+	color: transparent;
+	opacity: 0.35;
+	width: 1%;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.colorPicker label.white {
+	background-color: white;
+	-webkit-tap-highlight-color: white;
+}
+
+.colorPicker label.gray {
+	background-color: #bfbfbf;
+	-webkit-tap-highlight-color: #bfbfbf;
+}
+
+.colorPicker label.black {
+	background-color: black;
+	-webkit-tap-highlight-color: black;
+}
+
+.colorPicker label.brown {
+	background-color: #805500;
+	-webkit-tap-highlight-color: #805500;
+}
+
+.colorPicker label.gold {
+	background-color: #bb8c53;
+	-webkit-tap-highlight-color: #bb8c53;
+}
+
+.colorPicker label:first-of-type {
+	border-radius: 0.25em 0 0 0.25em;
+}
+
+.colorPicker label:last-of-type {
+	border-radius: 0 0.25em 0.25em 0;
+}
+
+.colorPicker label:hover {
+	opacity: 1;
+	color: #fff;
+	letter-spacing: normal;
+}
+
+.colorPicker .white:hover {
+	color: black;
+}
+
+.colorPicker input {
+	display: none;
+}
+
+.colorPicker input:checked+label {
+	width: 90%;
+	opacity: 1;
+	color: #fff;
+	letter-spacing: normal;
+}
+
+.colorPicker #hat-color-white:checked+label {
+	color: black;
+}

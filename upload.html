@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lost n' Hound</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/radio.css">
+		<link rel="stylesheet" href="css/color.css">
+		<link rel="stylesheet" href="css/upload.css">
+		<script src="js/upload.js"></script>
+	</head>
+	<body>
+		<span class="hidden">
+		<input id="lat" type="text" name="lat"/>
+		<input id="lon" type="text" name="lon"/>
+		</span>
+		<header>Found a Missing Pet?</header>
+		<div class="container">
+			<div class="progress">
+				<div class="progress__num progress__num--1 progress__num--filled">1</div>
+				<div class="progress__num progress__num--2">2</div>
+				<div class="progress__num progress__num--3">3</div>
+				<div class="progress__bar"></div>
+			</div>
+			<div class="cards">
+				<div class="card">
+					<h1>Doggy Profile</h1>
+					<form action="" class="form" autocomplete="off" name="doggyProfile">
+						<div class="form__group">
+							<div class="switch-field">
+								<input type="radio" id="radio-three" name="switchTwo" value="small"/>
+								<label for="radio-three">Small</label>
+								<input type="radio" id="radio-four" name="switchTwo" value="medium" />
+								<label for="radio-four">Medium</label>
+								<input type="radio" id="radio-five" name="switchTwo" value="large" />
+								<label for="radio-five">Large</label>
+							</div>
+						</div>
+						<div class="checkbox__group">
+							<label class="checkbox__label" for="spots">Spots?
+							<input class="checkbox__original" type="checkbox" id="spots">
+							<span class="checkbox__custom">
+							<i class="fas fa-check checkbox__tick"></i>
+							</span></label>
+						</div>
+						<div class="checkbox__group">
+							<label class="checkbox__label" for="collar">Wearing a collar?
+							<input class="checkbox__original" type="checkbox" id="collar">
+							<span class="checkbox__custom">
+							<i class="fas fa-check checkbox__tick"></i>
+							</span></label>
+						</div>
+						<div class="colorPicker">
+							<input class="white" type="radio" name="hatColor" value="white" id="hat-color-white"/>
+							<label class="white" for="hat-color-white">white</label>
+							<input class="gray" type="radio" name="hatColor" value="gray" id="hat-color-gray"/>
+							<label class="gray" for="hat-color-gray">gray</label>
+							<input class="black" type="radio" name="hatColor" value="black" id="hat-color-black"/>
+							<label class="black" for="hat-color-black">black</label>
+							<input class="brown" type="radio" name="hatColor" value="brown" id="hat-color-brown"/>
+							<label class="brown" for="hat-color-brown">brown</label>
+							<input class="gold" type="radio" name="hatColor" value="gold" id="hat-color-gold"/>
+							<label class="gold" for="hat-color-gold">gold</label>
+						</div>
+					</form>
+					<div class="card__buttons">
+						<button class="card__button card__button--next">Next</button>
+					</div>
+				</div>
+				<div class="card card--off-screen card--none">
+					<h1>Silhouette Picker</h1>
+					<form action="" class="form" autocomplete="off">
+						<div id="grid">
+							<h2 class="small medium large">Common Breeds</h2>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/golden-retriever.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/labrador-retriever.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium" src="images/silhouettes/bulldog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/french-bulldog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/german-shepherd.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium small" src="images/silhouettes/corgi.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium large" src="images/silhouettes/poodle.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/miniature-poodle.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/pug.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/rottweiler.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/yorkshire-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small medium" src="images/silhouettes/jack-russell-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium" src="images/silhouettes/cocker-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium" src="images/silhouettes/collie.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium" src="images/silhouettes/shiba-inu.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/siberian-husky.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/pomeranian.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/saint-bernard.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium" src="images/silhouettes/beagle.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/boxer.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/chihuahua.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common small" src="images/silhouettes/dachshund.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium large" src="images/silhouettes/dalmatian.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/doberman.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common large" src="images/silhouettes/great-dane.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium large" src="images/silhouettes/greyhound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="common medium" src="images/silhouettes/basset-hound.jpg">
+							</div>
+							<h2 class="small medium">Terriers</h2>
+							<div class="image-container">
+								<img class="terrier medium" src="images/silhouettes/airedale-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier medium" src="images/silhouettes/american-staffordshire-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/australian-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/border-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/boston-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/bull-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/cairn-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/czesky-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/dandie-dinmont-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/english-toy-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/glen-of-imaal-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/irish-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier medium" src="images/silhouettes/kerry-blue-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/lakeland-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/lancashire-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/manchester-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/norfolk-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/norwich-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/rat-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier medium" src="images/silhouettes/russian-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/scottish-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/sealyham-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/silky-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/skye-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/smooth-fox-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/soft-coated-wheaten-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier medium" src="images/silhouettes/staffordshire-bull-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/tibetan-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small" src="images/silhouettes/toy-fox-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/welsh-terrier.jpg">
+							</div>
+							<div class="image-container">
+								<img class="terrier small medium" src="images/silhouettes/wire-fox-terrier.jpg">
+							</div>
+							<h2 class="medium large">Hounds</h2>
+							<div class="image-container">
+								<img class="hound large" src="images/silhouettes/afghan-hound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound medium large" src="images/silhouettes/coonhound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound medium large" src="images/silhouettes/ibizan-hound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound large" src="images/silhouettes/irish-wolfhound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound medium" src="images/silhouettes/jura-hound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound medium" src="images/silhouettes/norwegian-elkhound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound medium" src="images/silhouettes/otterhound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound medium large" src="images/silhouettes/plott-hound.jpg">
+							</div>
+							<div class="image-container">
+								<img class="hound large" src="images/silhouettes/scottish-deerhound.jpg">
+							</div>
+							<h2 class="small medium large">Spaniels</h2>
+							<div class="image-container">
+								<img class="spaniel small medium" src="images/silhouettes/american-water-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel small medium" src="images/silhouettes/king-charles-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel medium large" src="images/silhouettes/clumber-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel medium" src="images/silhouettes/field-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel medium large" src="images/silhouettes/french-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel medium large" src="images/silhouettes/irish-water-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel small medium" src="images/silhouettes/sussex-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel small" src="images/silhouettes/tibetan-spaniel.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spaniel medium" src="images/silhouettes/welsh-springer-spaniel.jpg">
+							</div>
+							<h2 class="medium large">Pointers</h2>
+							<div class="image-container">
+								<img class="pointer medium large" src="images/silhouettes/german-longhaired-pointer.jpg">
+							</div>
+							<div class="image-container">
+								<img class="pointer medium large" src="images/silhouettes/german-shorthaired-pointer.jpg">
+							</div>
+							<div class="image-container">
+								<img class="pointer medium large" src="images/silhouettes/pointer.jpg">
+							</div>
+							<div class="image-container">
+								<img class="pointer medium large" src="images/silhouettes/pudel-pointer.jpg">
+							</div>
+							<h2 class="small">Pinschers</h2>
+							<div class="image-container">
+								<img class="pinscher small" src="images/silhouettes/affenpinscher.jpg">
+							</div>
+							<div class="image-container">
+								<img class="pinscher small" src="images/silhouettes/german-pinscher.jpg">
+							</div>
+							<div class="image-container">
+								<img class="pinscher small" src="images/silhouettes/miniature-pinscher.jpg">
+							</div>
+							<h2 class="medium large">Mastiffs</h2>
+							<div class="image-container">
+								<img class="mastiff medium large" src="images/silhouettes/bullmastiff.jpg">
+							</div>
+							<div class="image-container">
+								<img class="mastiff medium large" src="images/silhouettes/mastiff.jpg">
+							</div>
+							<div class="image-container">
+								<img class="mastiff medium large" src="images/silhouettes/neapolitan-mastiff.jpg">
+							</div>
+							<div class="image-container">
+								<img class="mastiff medium large" src="images/silhouettes/tibetan-mastiff.jpg">
+							</div>
+							<h2 class="medium large">Setters</h2>
+							<div class="image-container">
+								<img class="setter medium large" src="images/silhouettes/english-setter.jpg">
+							</div>
+							<div class="image-container">
+								<img class="setter medium large" src="images/silhouettes/gordon-setter.jpg">
+							</div>
+							<div class="image-container">
+								<img class="setter medium large" src="images/silhouettes/irish-setter.jpg">
+							</div>
+							<h2 class="small medium">Spitz</h2>
+							<div class="image-container">
+								<img class="spitz small medium" src="images/silhouettes/finnish-spitz.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spitz small medium" src="images/silhouettes/japanese-spitz.jpg">
+							</div>
+							<div class="image-container">
+								<img class="spitz small medium" src="images/silhouettes/spitz.jpg">
+							</div>
+							<h2 class="small medium">Sheepdogs</h2>
+							<div class="image-container">
+								<img class="sheepdog small medium" src="images/silhouettes/polish-lowland-sheepdog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="sheepdog small medium" src="images/silhouettes/old-english-sheepdog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="sheepdog small medium" src="images/silhouettes/shetland-sheepdog.jpg">
+							</div>
+							<h2 class="small medium large">Other</h2>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/basset-griffon-vendeen.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/brussels-griffon.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/wirehaired-pointing-griffon.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/havanese.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/labradoodle.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/chow-chow.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/maltese.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium large" src="images/silhouettes/schnauzer.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/shar-pei.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/estrela-mountain-dog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/greater-swiss-mountain-dog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/bearded-collie.jpg">
+							</div>
+							<div class="image-container">
+								<img class="large" src="images/silhouettes/anatolian-shepherd.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/akita.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/alaskan-malamute.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/american-eskimo.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/australian-cattle.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/australian-kelpie.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/basenji.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/borzoi.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/bouvier-des-flandres.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/briard.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/brittany.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/canaan-dog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/chinese-crested.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/coton-de-tulear.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/dogo-argentino.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/dogue-de-bordeaux.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/great-pyrenees.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/hovawart.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/italian-segugio.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/japanese-chine.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/keeshond.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/komondor.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/kooikerhondje.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/munsterlander.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/leonberger.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/lhasa-apso.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/lowchen.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/newfoundland.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/norwegian-buhund.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/papillon.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/pekingese.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/peruvian-inca-orchid.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/portuguese-water-dog.jpg">
+							</div>
+							<div class="image-container">
+								<img class="large" src="images/silhouettes/rhodesian-ridgeback.jpg">
+							</div>
+							<div class="image-container">
+								<img class="large" src="images/silhouettes/saluki.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/samoyed.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small medium" src="images/silhouettes/schipperke.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium" src="images/silhouettes/spinone-italiano.jpg">
+							</div>
+							<div class="image-container">
+								<img class="small" src="images/silhouettes/swedish-vallhund.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/vizsla.jpg">
+							</div>
+							<div class="image-container">
+								<img class="medium large" src="images/silhouettes/weimaraner.jpg">
+							</div>
+						</div>
+					</form>
+					<div class="card__buttons">
+						<button class="card__button card__button--next--special">Next</button>
+						<button class="card__button card__button--prev">Previous</button>
+					</div>
+				</div>
+				<div class="card card--off-screen card--none">
+					<h1>Contact Info (Optional)</h1>
+					<form action="" class="form" autocomplete="off">
+						<div class="form__group">
+							<input class="form__input" id="email" type="email" required>
+							<label class="form__label" for="email">Email</label>
+							<span class="border border--left"></span>
+							<span class="border border--bottom"></span>
+							<span class="border border--right"></span>
+							<span class="border border--top"></span>
+						</div>
+						<div class="form__group">
+							<input class="form__input" id="phone" type="number" required>
+							<label class="form__label" for="phone">Phone</label>
+							<span class="border border--left"></span>
+							<span class="border border--bottom"></span>
+							<span class="border border--right"></span>
+							<span class="border border--top"></span>
+						</div>
+					</form>
+					<div class="card__buttons">
+						<button class="card__button" id="submit">Submit</button>
+						<button class="card__button card__button--prev">Previous</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/upload.js"></script>
+		<div id="map"></div>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCipmY1QToFcQ-Dne9zSC-16GeL9mBk9u0&callback=initMap"></script>
+	</body>
+</html>
